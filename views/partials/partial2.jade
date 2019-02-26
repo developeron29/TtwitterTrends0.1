@@ -1,0 +1,32 @@
+ul(class="nav nav-pills nav-tabs nav-pills nav-justified")
+  li
+    a(href='view1') Real Time Location based Trends
+  br
+  li(class="active")
+    a(href='view2') Search by Specific topic
+
+h2(ng-init="topicerer = 'big data'") Search by Specific Topic
+p
+  b Enter Topic
+input(ng-model="topicerer", placeholder="Enter topic" , class="form-control")
+
+br
+button(class="btn btn-danger", ng-click="getFile();") Search
+br 
+br
+span(ng-show="waiter123")
+  {{waiter123}}
+  span.fa.fa-cog.fa-spin.fa-4x
+  br
+  | (This is infinite, until you close the window)
+br
+br
+p
+  b Table - Emotional trends of {{topicerer}} 
+  br
+  canvas(linechart='linechart', options='options', data='chart10', width='1000', height='600')
+  
+  
+
+div(style="position:fixed;right:14px;bottom:10px;")
+    a(href="http://ayushnarula.com/", target="_blank") &copy; Ayush Narula 2013

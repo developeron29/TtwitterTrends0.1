@@ -1,0 +1,46 @@
+ul(class="nav nav-pills nav-tabs nav-pills nav-justified")
+  li(class="active")
+    a(href='view1') Real Time Location based Trends
+  br
+  li
+    a(href='view2') Search by Specific topic
+
+h2 Real Time Location Based Trends
+div
+
+  p Get trends for 
+    br
+    input(ng-model="place",placeholder="Enter place", class="form-control")
+  button(ng-click="getData();",class="btn btn-danger")  
+     | Get Trends! 
+     span.glyphicon.glyphicon-search
+  br 
+  br
+  p(ng-init="place = 'united states'") {{smart}} 
+    span(ng-show="smart")
+      span.fa.fa-cog.fa-spin.fa-4x
+      br
+      | (This is infinite, until you close the window)
+  h3 Location -{{place}}  WhereOnEarthId-  {{woeid}} Latitude - {{lat}} - Longitude - {{long}}
+  div(style="position:absolute;float:left;")
+    p Trending Topics Relative Score
+    canvas(barchart='barchart', options='options', data='chart3', width='500', height='300')
+    p Sentiment Relative Score
+    canvas(barchart='barchart', options='options', data='chart1', width='500', height='300')
+    p Age Relative Score
+    canvas(barchart='barchart', options='options', data='chart2', width='500', height='300')
+    p Gender Relative Score
+    canvas(barchart='barchart', options='options', data='chart', width='500', height='300')
+    p Myers Briggs Judging Relative Score
+    canvas(barchart='barchart', options='options', data='chart4', width='500', height='300')
+    p Myers Briggs Attitude Score
+    canvas(barchart='barchart', options='options', data='chart5', width='500', height='300')
+    p Myers Briggs Lifestyle Relative Score
+    canvas(barchart='barchart', options='options', data='chart6', width='500', height='300')
+    p Myers Briggs Perceiveing Relative Score
+    canvas(barchart='barchart', options='options', data='chart7', width='500', height='300')
+    p Tonality Relative Score
+    canvas(barchart='barchart', options='options', data='chart8', width='500', height='300')
+  div(style="position:fixed;right:14px;bottom:10px;")
+    a(href="http://ayushnarula.com/", target="_blank") &copy; Ayush Narula 2013
+  
