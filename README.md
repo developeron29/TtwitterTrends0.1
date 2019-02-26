@@ -1,4 +1,4 @@
-#Twitter trend analysis
+# Twitter trend analysis
 
 - Update correct Twtter api credentials and uclassify credentials to use the app
 
